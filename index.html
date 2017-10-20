@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Javascript Starter App</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    
+    <!------------------------------------------->
+    <!--         MAIN HTML GOES BELOW         --->
+    <!------------------------------------------->
+    
+    <div class="container">
+      
+      <div class="jumbotron">
+        
+        <h1>Welcome to my awesome app!</h1>
+      
+        <p class="change-me">This text will get updated when the page loads</p>
+    
+        <a id="startButton" class="btn btn-primary btn-lg" onclick="startGame()">Start</a>
+        
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    
+    <!------------------------------------------->
+    <!--          END MAIN HTML               --->
+    <!------------------------------------------->
+
+    <!-- This allows us to use jQuery in our project -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- This file includes some bootstrap javascript code we can use later if we want -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script>
+    
+        //Any javascript that should be called when the page is loaded should go in here.
+        $(document).ready(function(){
+          
+            //find the html element with the class main-title and update its html (just text in this case) to say 
+            $(".change-me").html("Switchin' it up with Javascript!");
+            
+        });
+        
+        //functions that arne't called on page load can go out here
+        
+        // To see where this function is called, press control + F (command + F on a mac) to open up your "find" box, and type in startGame.
+        // Can you figure out based on that how it's used?
+        function startGame(){
+          
+          //you can replace this with whatver you want
+          
+          var answer = prompt("How do you like them apples?");
+          
+          alert("what's that you say? "+answer+"?");
+        }
+        
+    </script>
+  </body>
+</html>
